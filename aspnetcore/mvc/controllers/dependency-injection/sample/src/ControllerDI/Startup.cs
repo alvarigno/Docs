@@ -32,15 +32,16 @@ namespace ControllerDI
             services.Configure<SampleWebSettings>(Configuration);
 
             // Uncomment to add settings from code
-            //services.Configure<SampleWebSettings>(settings =>
-            //{
-            //    settings.Updates = 17;
-            //});
+            services.Configure<SampleWebSettings>(settings =>
+            {
+                settings.Updates = 17;
+            });
 
             services.AddMvc();
 
             // Add application services.
-            services.AddTransient<IDateTime, SystemDateTime>();
+            //services.AddTransient<IDateTime, SystemDateTime>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

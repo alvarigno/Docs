@@ -16,7 +16,6 @@ namespace ViewInjectSample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-
             services.AddTransient<IToDoItemRepository, ToDoItemRepository>();
             services.AddTransient<StatisticsService>();
             services.AddTransient<ProfileOptionsService>();
